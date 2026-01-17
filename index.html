@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator Potongan TBS PLASMA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>KALKULATOR POTONGAN TBS PLASMA</h2>
+
+<table>
+  <tr>
+    <th>Keterangan</th>
+    <th>Input</th>
+    <th>Satuan</th>
+  </tr>
+
+  <tr>
+    <td>Nomor Polisi Kendaraan</td>
+    <td><input id="nopol"></td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Nama KUD</td>
+    <td><input id="kud"></td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Umur Tanam</td>
+    <td><input id="umur"></td>
+    <td>Tahun</td>
+  </tr>
+
+  <tr>
+    <td>Jumlah Tandan</td>
+    <td><input id="jumlahTandan" type="number"></td>
+    <td>Tandan</td>
+  </tr>
+  <tr>
+    <td>Bruto</td>
+    <td><input id="bruto" type="number"></td>
+    <td>Kg</td>
+  </tr>
+  <tr>
+    <td>Tarra</td>
+    <td><input id="tarra" type="number"></td>
+    <td>Kg</td>
+  </tr>
+  <tr>
+    <td>Berondolan</td>
+    <td><input id="berondolan" type="number"></td>
+    <td>Kg</td>
+  </tr>
+  <tr>
+    <td>Ada Sampah Berondolan?</td>
+    <td>
+      <select id="adaSampah" onchange="hitung()">
+        <option value="tidak">Tidak</option>
+        <option value="ya">Ya</option>
+      </select>
+    </td>
+    <td>-</td>
+  </tr>
+
+  <tr>
+    <td>Berat Sampah Berondolan</td>
+    <td><input id="sampah" readonly></td>
+    <td>Kg</td>
+  </tr>
+
+  <tr>
+    <td>Mentah</td>
+    <td><input id="mentah" type="number"></td>
+    <td>Tandan</td>
+  </tr>
+  <tr>
+    <td>Lewat Matang</td>
+    <td><input id="lewatMatang" type="number"></td>
+    <td>Tandan</td>
+  </tr>
+  <tr>
+    <td>Tankos</td>
+    <td><input id="tankos" type="number"></td>
+    <td>Tandan</td>
+  </tr>
+  <tr>
+    <td>Tangkai Panjang</td>
+    <td><input id="tangkai" type="number"></td>
+    <td>Tandan</td>
+  </tr>
+  <tr>
+    <td>TBS &lt; 3 Kg</td>
+    <td><input id="tbs3" type="number"></td>
+    <td>Tandan</td>
+  </tr>
+  <tr>
+    <td>Buah Basah / Lembab</td>
+    <td><input id="basah" type="number"></td>
+    <td>%</td>
+  </tr>
+</table>
+
+<br>
+<button onclick="hitung()">Hitung Potongan</button>
+
+<br><br>
+<b>Total Potongan (%)</b><br>
+<input id="totalPotongan" readonly>
+
+
+<script src="script.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js")
+    .then(() => console.log("Service Worker aktif"))
+    .catch(err => console.log("SW gagal", err));
+}
+</script>
+</body>
+</html>
