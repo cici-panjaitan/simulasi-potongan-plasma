@@ -2,9 +2,11 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Kalkulator Potongan TBS PLASMA</title>
+  <title>KALKULATOR POTONGAN TBS PLASMA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2e7d32">
 </head>
 <body>
 
@@ -113,9 +115,7 @@
 <script src="script.js"></script>
 <script>
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js")
-    .then(() => console.log("Service Worker aktif"))
-    .catch(err => console.log("SW gagal", err));
+  navigator.serviceWorker.register("service-worker.js");
 }
 </script>
 </body>
