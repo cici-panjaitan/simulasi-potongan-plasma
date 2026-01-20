@@ -1,7 +1,7 @@
 {
-  "name": "Kalkulator Potongan TBS Plasma",
-  "short_name": "TBS Plasma",
-  "start_url": "./index.html",
+  "name": "Kalkulator Permentan",
+  "short_name": "Permentan",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2e7d32",
